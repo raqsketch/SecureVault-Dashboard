@@ -1,0 +1,76 @@
+:root {
+  /* Colors */
+  --bg-base: #0D1117;
+  --bg-surface: #161B22;
+  --bg-surface-hover: #1F2733;
+  --border-default: #30363D;
+  --text-primary: #E6EDF3;
+  --text-secondary: #8B949E;
+  --color-primary: #2F81F7;
+  --color-danger: #F85149;
+  --color-success: #3FB950;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+
+  /* Typography sizes */
+  --text-h1: 24px;
+  --text-h2: 18px;
+  --text-body: 14px;
+  --text-body-sm: 13px;
+  --text-caption: 12px;
+  --text-label: 12px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: var(--text-body);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.explorer-panel {
+  flex: 1;
+  padding: var(--space-5);
+  overflow-y: auto;
+}
+
+.file-item,
+.folder-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  border-radius: 4px;
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-1);
+  padding-right: var(--space-2);
+}
+
+.file-item:hover,
+.folder-item:hover {
+  background: var(--bg-surface-hover);
+}
+
+.file-item-selected {
+  background: var(--color-primary);
+  color: var(--text-primary);
+}
+
+.file-size {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-size: var(--text-caption);
+}

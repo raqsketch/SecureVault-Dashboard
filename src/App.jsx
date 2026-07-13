@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import FileItem from './components/FileExplorer/FileItem';
 import FolderItem from './components/FileExplorer/FolderItem';
+import PropertiesPanel from './components/PropertiesPanel/PropertiesPanel';
 import fileSystemData from './data/data.json';
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
           )
         )}
       </div>
+
+      <PropertiesPanel file={selectedFile} />
     </div>
   );
 }
